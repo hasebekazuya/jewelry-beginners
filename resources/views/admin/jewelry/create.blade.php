@@ -31,7 +31,7 @@
                     <div class="form-group row">
                         <label class="clo-md-2">モース硬度</label>
                         <div class="clo-md-8">
-                            <input type="texst" class="form-control" name="Mohs hardness"　value="{{ old('Mohs hardness') }}">
+                            <input type="texst" class="form-control" name="Mohs_hardness"　value="{{ old('Mohs hardness') }}">
                         </div>
                     </div>
                     <div class="form-group row">
@@ -59,9 +59,9 @@
                         </div>
                     </div>
                     <div class="form-group row">
-                        <label class="clo-md-2">誕生月</label>
+                        <label class="clo-md-2">誕生石</label>
                         <div class="clo-md-10">
-                            <input type="texst" class="form-control" name="birth_month value="{{ old('birth_month') }}">
+                            <input type="texst" class="form-control" name="birthstone" value="{{ old('birth_month') }}">
                         </div>
                     </div>
                     @csrf

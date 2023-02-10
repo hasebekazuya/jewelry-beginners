@@ -14,11 +14,11 @@ class Gem extends Model
     public static $rules = array(
         'gem_name' => 'required',
         'chemical composition' => 'required',
-        'Mohs hardness' => 'required',
+        'Mohs_hardness' => 'required',
         'overview' => 'required',
         'maintenance' => 'required',
         'Summary & Notes' => 'required',
         'image' => 'required',
-        'birth_month' => 'required',
+        'birthstone' => 'required',
     );
 }

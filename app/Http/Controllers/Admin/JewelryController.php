@@ -16,29 +16,37 @@ class JewelryController extends Controller
     
     public function create(Request $request)
     {
-        $this->validate($request,Jewelry::$rules);
+        $this->validate($request,Gem::$rules);
         
-        $jewelry = new jewelry;
+        $gem = new Gem;
         $form = $request->all();
         
         if (isset($form['image'])) {
             $path = $request->file('image')->store('public/image');
-            $jewelry->image_path = basename($path);
+            $gem->image_path = basename($path);
         } else {
-            $jewelry->image_path = null;
+            $gem->image_path = null;
         }
         unset($form['_token']);
         unset($form['image_path']);
         
-        $jewelry->fill($form);
-        $jewelry->save();
+        $gem->fill($form);
+        $gem->save();
         
         return redirect('admin/jewelry/create');
     }
     
-    public function index()
+    public function index(Request $request)
     {
-        return view('admin.jewelry.index');
+        $cond_title = $request->cond_title;
+        
+        if ($cond_title != '') {
+            $posts = Gem::where('title', $cond_title)->get();
+        } else {
+            $posts = Gem::all();
+        }
+        
+        return view('admin.jewelry.index', ['posts' => $posts, 'cond_title' => $cond_title]);
     }
     
     public function edit()

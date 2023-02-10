@@ -13,7 +13,7 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('gem', function (Blueprint $table) {
+        Schema::create('gems', function (Blueprint $table) {
             $table->id();
             $table->string('gem_name');
             $table->string('chemical composition');
@@ -21,8 +21,8 @@ return new class extends Migration
             $table->string('overview');
             $table->string('maintenance');
             $table->string('Summary & Notes');
-            $table->string('image');
-            $table->integer('birth_month');
+            $table->string('image')->nullable();
+            $table->integer('birthstone');
             $table->timestamps();
         });
     }
@@ -34,6 +34,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('gem');
+        Schema::dropIfExists('gems');
     }
 };

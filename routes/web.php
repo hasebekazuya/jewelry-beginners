@@ -22,7 +22,7 @@ use App\Http\Controllers\Admin\JewelryController;
 Route::controller(JewelryController::class)->prefix('admin')->name('admin.')->middleware('auth')->group(function() {
     Route::get('jewelry/create', 'add')->name('jewelry.add');
     Route::post('jewelry/create', 'create')->name('jewelry.create');
-    Route::get('jewelr','index')->name('jewelry.index');
+    Route::get('jewelry','index')->name('jewelry.index');
     Route::get('jewelry/edit','edit')->name('jewelry.edit');
     Route::post('jewelry/edit','update')->name('jewelry.update');
     Route::get('jewelry/delete','delete')->name('jewelry.delete');
