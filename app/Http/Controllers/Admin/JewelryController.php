@@ -30,8 +30,7 @@ class JewelryController extends Controller
         unset($form['_token']);
         unset($form['image_path']);
         
-        $gem->fill($form);
-        $gem->save();
+        $gem->fill($form)->save();
         
         return redirect('admin/jewelry/create');
     }
@@ -51,15 +50,46 @@ class JewelryController extends Controller
     
     public function edit()
     {
-        return view('admin.jewery.edit');
+        $gem = Gem::find($request->id);
+        
+        if (empty($gem)) {
+            abort(404);
+            
+        }
+        return view('admin.jewery.edit', ['gem_form' => $gem]);
     }
     
-    public function update()
+    public function update(Request $request)
     {
+        $this -> validate($request, Gem::$rules);
+        
+        $gem = Gem::find($request->id);
+        $gem_form = $request->all();
+        
+        if ($request->remove == 'true') {
+            $gem_form['image_path'] = null;
+        } elseif ($reqest->file('image')) {
+            $path = $reqest->fiie('image')->store('public/image');
+            $gem_form ['image_path'] = basename ($path);
+        } else {
+            $gem_form ['image_path'] = $gem->image_path;
+        }
+        
+        unset($gem_form['image']);
+        unset($gem_form['remove']);
+        unset($gem_form['_token']);
+        
+        $gem->fill($gem_form)->save;
+        
         return redirect('admin/jewelry/edit');
     }
-    public function delete()
+    public function delete(Request $reqest)
     {
+        
+        $gem = Gem::find($reqest->id);
+        
+        $gem->delete();
+        
         return redirect('admin/jewelry/');
     }
 }

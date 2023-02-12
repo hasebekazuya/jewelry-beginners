@@ -25,13 +25,13 @@
                     <div class="form-guroup row">
                         <label class="col-md-2">化学組成</label>
                         <div class="clo-md-8">
-                            <input type="texst" class="form-control" name="chemical composition"　value="{{ old('chemical composition') }}">
+                            <input type="text" class="form-control" name="chemical composition"　value="{{ old('chemical composition') }}">
                         </div>
                     </div>
                     <div class="form-group row">
                         <label class="clo-md-2">モース硬度</label>
                         <div class="clo-md-8">
-                            <input type="texst" class="form-control" name="Mohs_hardness"　value="{{ old('Mohs hardness') }}">
+                            <input type="text" class="form-control" name="Mohs_hardness"　value="{{ old('Mohs_hardness') }}">
                         </div>
                     </div>
                     <div class="form-group row">
@@ -61,7 +61,7 @@
                     <div class="form-group row">
                         <label class="clo-md-2">誕生石</label>
                         <div class="clo-md-10">
-                            <input type="texst" class="form-control" name="birthstone" value="{{ old('birth_month') }}">
+                            <input type="text" class="form-control" name="birthstone" value="{{ old('birth_month') }}">
                         </div>
                     </div>
                     @csrf
