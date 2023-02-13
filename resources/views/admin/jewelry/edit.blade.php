@@ -1,4 +1,4 @@
-@extends ('layout.admin')
+@extends ('layouts.admin')
 @section ('title','宝石の編集画面')
 
 @section ('content')

@@ -19,19 +19,19 @@
                     <div class="forme-group row">
                         <label class="clo-md-2">宝石名</label>
                         <div class ="clo-md-10">
-                            <input type="texst" class="form-control" name="gem_name" value="{{ old('gem_name') }}">
+                            <input type="text" class="form-control" name="gem_name" value="{{ old('gem_name') }}">
                         </div>
                     </div>
                     <div class="form-guroup row">
                         <label class="col-md-2">化学組成</label>
-                        <div class="clo-md-8">
-                            <input type="text" class="form-control" name="chemical composition"　value="{{ old('chemical composition') }}">
+                        <div class="clo-md-10">
+                            <input type="text" class="form-control" name="chemical_composition"　value="{{ old('chemical_composition') }}">
                         </div>
                     </div>
                     <div class="form-group row">
                         <label class="clo-md-2">モース硬度</label>
                         <div class="clo-md-8">
-                            <input type="text" class="form-control" name="Mohs_hardness"　value="{{ old('Mohs_hardness') }}">
+                            <input type="text" class="form-control" name="mohs_hardness"　value="{{ old('mohs_hardness') }}">
                         </div>
                     </div>
                     <div class="form-group row">
@@ -49,7 +49,7 @@
                     <div class="form-group row">
                         <label class="clo-md-2">まとめ＆注意点</label>
                         <div class="clo-md-10">
-                            <textarea class="form-control" name="Summary & Notes" row="20" cols="20">{{ old('Summary & Notes') }}</textarea>
+                            <textarea class="form-control" name="summary_notes" row="20" cols="20">{{ old('summary_notes') }}</textarea>
                         </div>
                     </div>
                     <div class="form-group row">

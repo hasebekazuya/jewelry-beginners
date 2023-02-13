@@ -35,9 +35,6 @@
                                 <th width="10%">宝石名</th>
                                 <th width="10%">化学組成</th>
                                 <th width="10%">モース硬度</th>
-                                <th width="20%">概要</th>
-                                <th width="20%">お手入れ</th>
-                                <th width="20%">まとめ＆注意点</th>
                                 <th width="20%">誕生石</th>
                             </tr>
                         </thead>
@@ -46,12 +43,17 @@
                                 <tr>
                                     <th>{{ $gem->id }}</th>
                                     <td>{{ Str::limit($gem->gem_name, 15) }}</td>
-                                    <td>{{ Str::limit($gem->chemical, 15) }}</td>
-                                    <td>{{ Str::limit($gem->Mohshardness, 5) }}</td>
-                                    <td>{{ Str::limit($gem->overview, 250) }}</td>
-                                    <td>{{ Str::limit($gem->maintenance,100) }}</td>
-                                    <td>{{ Str::limit($gem->SummaryNotes,250) }}</td>
+                                    <td>{{ Str::limit($gem->chemical_composition, 15) }}</td>
+                                    <td>{{ Str::limit($gem->mohs_hardness, 5) }}</td>
                                     <td>{{ Str::limit($gem->birthstone,5) }}</td>
+                                    <td>
+                                        <div>
+                                            <a href="{{ route('admin.jewelry.edit', ['id' => $gem->id]) }}">編集</a>
+                                        </div>
+                                        <div>
+                                            <a href="{{ route('admin.jewelry.delete', ['id' => $gem->id]) }}">削除</a>
+                                        </div>
+                                    </td>    
                                 </tr>
                             @endforeach    
                         </tbody>

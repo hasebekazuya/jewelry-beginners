@@ -48,7 +48,7 @@ class JewelryController extends Controller
         return view('admin.jewelry.index', ['posts' => $posts, 'cond_title' => $cond_title]);
     }
     
-    public function edit()
+    public function edit(Request $request)
     {
         $gem = Gem::find($request->id);
         
@@ -56,7 +56,7 @@ class JewelryController extends Controller
             abort(404);
             
         }
-        return view('admin.jewery.edit', ['gem_form' => $gem]);
+        return view('admin.jewelry.edit', ['gem_form' => $gem]);
     }
     
     public function update(Request $request)
@@ -81,7 +81,7 @@ class JewelryController extends Controller
         
         $gem->fill($gem_form)->save;
         
-        return redirect('admin/jewelry/edit');
+        return redirect('admin/jewelry/edit?id=' . $gem->id);
     }
     public function delete(Request $reqest)
     {
