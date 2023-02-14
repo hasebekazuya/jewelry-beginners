@@ -37,13 +37,13 @@
                     <div class="form-group row">
                         <label class="clo-md-2">概要</label>
                         <div class="clo-md-10">
-                            <textarea class="form-control" name="overview" rows="8">{{ old('overview') }}</textarea>
+                            <textarea class="form-control" name="overview" rows="">{{ old('overview') }}</textarea>
                         </div>
                     </div>
                     <div class="form-group row">
                         <label class="clo-md-2">お手入れ</label>
                         <div class="clo-md-10">
-                            <textarea class="form-control" name="maintenance" rows="5">{{ old('maintenance') }}</textarea>
+                            <textarea class="form-control" name="maintenance" rows="10">{{ old('maintenance') }}</textarea>
                         </div>
                     </div>
                     <div class="form-group row">
@@ -61,7 +61,7 @@
                     <div class="form-group row">
                         <label class="clo-md-2">誕生石</label>
                         <div class="clo-md-10">
-                            <input type="text" class="form-control" name="birthstone" value="{{ old('birth_month') }}">
+                            <input type="text" class="form-control" name="birthstone" value="{{ old('birthstone"') }}">
                         </div>
                     </div>
                     @csrf

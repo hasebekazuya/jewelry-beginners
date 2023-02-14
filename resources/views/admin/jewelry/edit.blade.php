@@ -22,7 +22,7 @@
                     </div>
                     <div class="form-group row">
                         <label class="clo-md-2" for="chemical">化学組成</label>
-                        <div class="clo-md-10">
+                        <div class="clo-md-8">
                             <input type="text" class="form-control" name="chemical" value="{{ $gem_form->chemical }}">
                         </div> 
                     </div>
@@ -48,6 +48,12 @@
                         <label class="col-md-2" for="Summary & Notes">まとめ＆注意点</label>
                         <div class="col-md-10">
                             <textarea class="form-control" name="Summary & Notes" row="20">{{ old('Summary & Notes') }}</textarea>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-md-2" for="birthstone">誕生石</label>
+                        <div class="col-md-10">
+                           <input type="text" class="form-control" name="birthstone" value="{{ $gem_form->birthstone }}">
                         </div>
                     </div>
                     <div class="form-group row">
