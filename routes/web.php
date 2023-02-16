@@ -23,6 +23,7 @@ Route::controller(JewelryController::class)->prefix('admin')->name('admin.')->mi
     Route::get('jewelry/create', 'add')->name('jewelry.add');
     Route::post('jewelry/create', 'create')->name('jewelry.create');
     Route::get('jewelry','index')->name('jewelry.index');
+    Route::get('jewelry/show','show')->name('jewelry.show');
     Route::get('jewelry/edit','edit')->name('jewelry.edit');
     Route::post('jewelry/edit','update')->name('jewelry.update');
     Route::get('jewelry/delete','delete')->name('jewelry.delete');

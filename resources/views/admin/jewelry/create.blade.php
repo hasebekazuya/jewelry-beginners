@@ -25,13 +25,13 @@
                     <div class="form-guroup row">
                         <label class="col-md-2">化学組成</label>
                         <div class="clo-md-10">
-                            <input type="text" class="form-control" name="chemical_composition"　value="{{ old('chemical_composition') }}">
+                            <input type="text" class="form-control" name="chemical_composition" value="{{ old('chemical_composition') }}">
                         </div>
                     </div>
                     <div class="form-group row">
                         <label class="clo-md-2">モース硬度</label>
                         <div class="clo-md-8">
-                            <input type="text" class="form-control" name="mohs_hardness"　value="{{ old('mohs_hardness') }}">
+                            <input type="text" class="form-control" name="mohs_hardness" value="{{ old('mohs_hardness') }}">
                         </div>
                     </div>
                     <div class="form-group row">

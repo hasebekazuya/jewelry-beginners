@@ -29,7 +29,7 @@
                     <div class="form-group row">
                         <label class="col-md-2" for="Mohs_hardness">モース硬度</label>
                         <div class="col-md-10">
-                            <input type="text" class="form-control" name="Mohs_hardness" value="{{ $gem_form->Mohs_hardness }}">
+                            <input type="text" class="form-control" name="mohs_hardness" value="{{ $gem_form->Mohs_hardness }}">
                         </div>
                     </div>
                     <div class="form-group row">
@@ -45,9 +45,9 @@
                         </div>
                     </div>
                     <div class="form-group row">
-                        <label class="col-md-2" for="Summary & Notes">まとめ＆注意点</label>
+                        <label class="col-md-2" for="summary_notes">まとめ＆注意点</label>
                         <div class="col-md-10">
-                            <textarea class="form-control" name="Summary & Notes" row="20">{{ old('Summary & Notes') }}</textarea>
+                            <textarea class="form-control" name="summary_notes" row="20">{{ old('summary_notes') }}</textarea>
                         </div>
                     </div>
                     <div class="form-group row">

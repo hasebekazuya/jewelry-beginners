@@ -92,4 +92,39 @@ class JewelryController extends Controller
         
         return redirect('admin/jewelry/');
     }
+    
+    public function show(Request $reqest)
+    {
+        //dd($reqest);
+        $id=$reqest->id;
+        //dd($id);
+        $gem=Gem::find($id);
+        //dd($jewelry);
+        return view('admin.jewelry.show', ['gem' => $gem]);
+    }
+    
+    public function find(Request $reqest)
+    {
+        return view();
+    }
+   
+    public function birthstone()
+    {
+        return redirect();
+    }
+    
+    public function trivia()
+    {
+        return view();
+    }
+    
+    public function question()
+    {
+        return  view();
+    }
+    
+    public function favorite()
+    {
+        return redirect();
+    }
 }
