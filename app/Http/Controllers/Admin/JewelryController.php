@@ -103,22 +103,22 @@ class JewelryController extends Controller
         return view('admin.jewelry.show', ['gem' => $gem]);
     }
     
-    public function find(Request $reqest)
+    public function detail(Request $reqest)
     {
         return view();
     }
    
-    public function birthstone()
+    public function trivia()
     {
         return redirect();
     }
     
-    public function trivia()
+    public function birth()
     {
         return view();
     }
     
-    public function question()
+    public function find()
     {
         return  view();
     }
