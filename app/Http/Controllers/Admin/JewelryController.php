@@ -105,7 +105,8 @@ class JewelryController extends Controller
     
     public function detail(Request $reqest)
     {
-        return view();
+        
+        return view('admin.jewelry.detail');
     }
    
     public function trivia()
