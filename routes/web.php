@@ -24,10 +24,13 @@ Route::controller(JewelryController::class)->prefix('admin')->name('admin.')->mi
     Route::post('jewelry/create', 'create')->name('jewelry.create');
     Route::get('jewelry','index')->name('jewelry.index');
     Route::get('jewelry/show','show')->name('jewelry.show');
-    Route::get('jewelry/detail','detail')->name('jewelry.detail');
     Route::get('jewelry/edit','edit')->name('jewelry.edit');
     Route::post('jewelry/edit','update')->name('jewelry.update');
     Route::get('jewelry/delete','delete')->name('jewelry.delete');
+    
+    Route::get('jewelry/detail', function () {
+        return view('admin.jewelry.detail');
+    })->name('jewelry.detail');
 });
 Auth::routes();
 

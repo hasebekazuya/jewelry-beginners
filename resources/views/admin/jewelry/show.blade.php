@@ -14,49 +14,49 @@
                                 <th width="20%">宝石名</th>
                             </tr>
                             <tr>
-                                <td>{{ Str::limit($gem->gem_name, 30) }}</td>
+                                <td>{{ $gem->gem_name }}</td>
                             </tr>
                             <tr>
                                 <th width="20%">化学組成</th>
                             </tr>  
                             <tr>
-                                <td>{{ Str::limit($gem->chemical_composition, 20) }}</td>
+                                <td>{{ $gem->chemical_composition }}</td>
                             </tr>
                             <tr>
                                 <th width="20%">モース硬度</th>
                             </tr>
                             <tr>
-                                <td>{{ Str::limit($gem->mohs_hardness, 11) }}</td>
+                                <td>{{ $gem->mohs_hardness }}</td>
                             </tr> 
                             <tr>
                                 <th width="20%">概要</th>
                             </tr>
                             <tr>
-                                <td>{{ Str::limit($gem->overview,500) }}</td>
+                                <td>{{ $gem->overview }}</td>
                             </tr> 
                              <tr>
                                 <th width="20%">お手入れ</th>
                             </tr>
                             <tr>
-                                <td>{{ Str::limit($gem->maintenance,1000) }}</td>
+                                <td>{{ $gem->maintenance }}</td>
                             </tr>
                              <tr>
                                 <th width="20%">まとめ＆注意点</th>
                             </tr>
                             <tr>
-                                <td>{{ Str::limit($gem->summary_notes,1000) }}</td>
+                                <td>{{ $gem->summary_notes }}</td>
                             </tr>
                             <tr>
                                 <th width="20%">画像</th>
                             </tr>
                             <tr>
-                                <td>{{ Str::limit($gem->birthstone,5) }}</td>
+                             <img src="{{ secure_asset('public/image/' . $gem->image_path) }}">
                             </tr>
                             <tr>
                                 <th width="20%">誕生石</th>
                             </tr>
                             <tr>
-                                <td>{{ Str::limit($gem->birthstone,5) }}</td>
+                                <td>{{ $gem->birthstone }}</td>
                             </tr>
                     </table>
                 </div>
