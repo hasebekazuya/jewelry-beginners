@@ -7,7 +7,7 @@
             <h2>宝石の詳細</h2>
         </div>
         <div class="row">
-            <div class="list-jewelry col-md-12 mx-auto">
+            <div class="list-jewelry col-md-10 mx-auto">
                 <div class="row">
                     <table class="table-table-light table-hover">
                             <tr>

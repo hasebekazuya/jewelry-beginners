@@ -31,6 +31,11 @@ Route::controller(JewelryController::class)->prefix('admin')->name('admin.')->mi
     Route::get('jewelry/detail', function () {
         return view('admin.jewelry.detail');
     })->name('jewelry.detail');
+    
+     Route::get('jewelry/trivial', function () {
+        return view('admin.jewelry.trivial');
+    })->name('jewelry.trivial');
+    
 });
 Auth::routes();
 
