@@ -6,9 +6,18 @@
         <div class="row">
             <h2 class="contents__title">ジュエリーの基礎知識</h2>
         </div>
+        <nav class="header_list_index">
+        <ul>
+             <li>
+                <a href="{{ route('admin.jewelry.top') }}">Top</a>
+                    <span class="menu_border"></span>
+                    <span class="menu_line"></span>
+             </li>
+        </ul>
+        </nav>           
         <!-- コンテンツ本体 -->
         <div class="row">
-            <div class="list-jewelry col-md-10 mx-auto">
+            <div class="col-md-10 mx-auto">
                 <div class="row">
                     <h3 class="content_subtitle">ジュエリーとは？</h3>
                         <p>ここでは装身具に使用する素材に制限のあるもので、地金には金・銀・プラチナ類を使用し、天然・人口の宝石素材のみ使用したものと定義します。<br />

@@ -83,10 +83,10 @@ class JewelryController extends Controller
         
         return redirect('admin/jewelry/edit?id=' . $gem->id);
     }
-    public function delete(Request $reqest)
+    
+     public function delete(Request $request)
     {
-        
-        $gem = Gem::find($reqest->id);
+        $gem = Gem::find($request->id);
         
         $gem->delete();
         
@@ -103,18 +103,17 @@ class JewelryController extends Controller
         return view('admin.jewelry.show', ['gem' => $gem]);
     }
     
-    public function birth()
+    public function birth(Request $reqest)
     {
-        return view();
+        return view('admin.jewelry.birth');
     }
     
-    public function find()
+    public function search(Request $reqest)
     {
-        return  view();
-    }
-    
-    public function favorite()
-    {
-        return redirect();
+        $id=$reqest->id;
+        
+        $gem=Gem::find($id);
+        
+        return  view('admin.jewelry.search');
     }
 }

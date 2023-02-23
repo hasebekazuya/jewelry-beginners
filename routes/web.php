@@ -24,6 +24,8 @@ Route::controller(JewelryController::class)->prefix('admin')->name('admin.')->mi
     Route::post('jewelry/create', 'create')->name('jewelry.create');
     Route::get('jewelry','index')->name('jewelry.index');
     Route::get('jewelry/show','show')->name('jewelry.show');
+    Route::get('jewelry/search','search')->name('jewelry.search');
+    Route::get('jewelry/birth','birth')->name('jewelry.birth');  
     Route::get('jewelry/edit','edit')->name('jewelry.edit');
     Route::post('jewelry/edit','update')->name('jewelry.update');
     Route::get('jewelry/delete','delete')->name('jewelry.delete');
@@ -32,9 +34,13 @@ Route::controller(JewelryController::class)->prefix('admin')->name('admin.')->mi
         return view('admin.jewelry.detail');
     })->name('jewelry.detail');
     
-     Route::get('jewelry/trivial', function () {
-        return view('admin.jewelry.trivial');
-    })->name('jewelry.trivial');
+     Route::get('jewelry/trivia', function () {
+        return view('admin.jewelry.trivia');
+    })->name('jewelry.trivia');
+    
+     Route::get('jewelry/top', function () {
+        return view('admin.jewelry.top');
+    })->name('jewelry.top');
     
 });
 Auth::routes();

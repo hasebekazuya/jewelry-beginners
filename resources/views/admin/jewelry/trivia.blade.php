@@ -6,6 +6,15 @@
         <div class="row">
             <h2 class="contents__title">豆知識</h2>
         </div>
+        <nav class="header_list_index">
+             <ul>
+                <li>
+                    <a href="{{ route('admin.jewelry.top') }}">Top</a>
+                    <span class="menu_border"></span>
+                    <span class="menu_line"></span>
+                </li>
+            </ul>
+        </nav>
         <!-- コンテンツ本体 -->
         <div class="row">
             <div class="list-jewelry col-md-10 mx-auto">

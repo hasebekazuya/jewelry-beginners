@@ -26,7 +26,7 @@
             </div>
         </div>
         <div class="row">
-            <div class="list-jewelry col-md-12 mx-auto">
+            <div class="list-jewelry col-md-8 mx-auto">
                 <div class="row">
                     <table class="table-table-light table-hover">
                         <thead>

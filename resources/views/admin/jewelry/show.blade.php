@@ -3,11 +3,26 @@
 
 @section('content')
     <div class="container">
+                    
         <div class="row">
             <h2>宝石の詳細</h2>
         </div>
+         <nav class="header_list_index">
+            <ul>
+                <li>
+                    <a href="{{ route('admin.jewelry.top') }}">Top</a>
+                    <span class="menu_border"></span>
+                    <span class="menu_line"></span>
+                </li>
+                <li>
+                    <a href="{{ route('admin.jewelry.search') }}">宝石から探す</a>
+                 <span class="menu_border"></span>
+                    <span class="menu_line"></span>
+                </li>
+            </ul>
+        </nav> 
         <div class="row">
-            <div class="list-jewelry col-md-10 mx-auto">
+            <div class="list-jewelry col-md-8 mx-auto">
                 <div class="row">
                     <table class="table-table-light table-hover">
                             <tr>
@@ -59,6 +74,9 @@
                                 <td>{{ $gem->birthstone }}</td>
                             </tr>
                     </table>
+                    <div>
+                        <input type="submit" class="btn-btn-primary" value="お気に入り">
+                    </div>
                 </div>
             </div>
         </div>
