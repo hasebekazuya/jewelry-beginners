@@ -15,7 +15,7 @@
                     <div class="form-group row">
                         <label class="clo-md-2">宝石名</label>
                         <div class="col-md-8">
-                            <input type="text" class="form-control" name="cond_title" value="{{ $cond_title }}">
+                            <input type="text" class="form-control" name="gem_name" value="{{ $gem_name }}">
                         </div>
                         <div class="col-md-2">
                             @csrf

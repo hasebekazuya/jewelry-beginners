@@ -37,15 +37,15 @@ class JewelryController extends Controller
     
     public function index(Request $request)
     {
-        $cond_title = $request->cond_title;
+        $gem_name = $request->gem_name;
         
-        if ($cond_title != '') {
-            $posts = Gem::where('title', $cond_title)->get();
+        if ($gem_name != '') {
+            $posts = Gem::where('title', $gem_name)->get();
         } else {
             $posts = Gem::all();
         }
         
-        return view('admin.jewelry.index', ['posts' => $posts, 'cond_title' => $cond_title]);
+        return view('admin.jewelry.index', ['posts' => $posts, 'gem_name' => $gem_name]);
     }
     
     public function edit(Request $request)
@@ -108,12 +108,33 @@ class JewelryController extends Controller
         return view('admin.jewelry.birth');
     }
     
-    public function search(Request $reqest)
+    public function search(Request $request)
     {
-        $id=$reqest->id;
+    
+        // $gem_name= $request->gem_name;
         
-        $gem=Gem::find($id);
+        // if ($gem_name != '') {
+        //     $posts = Gem::where('title', $gem_name)->get();
+        // } else {
+            // $posts = Gem::all();
+        // }
         
-        return  view('admin.jewelry.search');
+        //$posts = Gem::where('gem_name','like', 'ア%')->where('gem_name','like', 'イ%')->orWhere('gem_name','like', 'ウ%')->orWhere('gem_name','like', 'エ%')->orWhere('gem_name','like', 'オ%')->get();
+$posts =  Gem::where(function($query){
+$query->orWhere('gem_name', 'like', 'ア%')
+        ->orWhere('gem_name', 'like', 'イ%')
+        ->orWhere('gem_name', 'like', 'ウ%')
+        ->orWhere('gem_name', 'like', 'エ%')
+        ->orWhere('gem_name', 'like', 'オ%');
+        })->get();
+$posts2=Gem::where(function($query){
+$query->orWhere('gem_name', 'like', 'ア%')
+      ->orWhere('gem_name', 'like', 'イ%')
+      ->orWhere('gem_name', 'like', 'ウ%')
+      ->orWhere('gem_name', 'like', 'エ%')
+      ->orWhere('gem_name', 'like', 'オ%');
+    })->get();
+        //$posts = Gem::whereIn('gem_name', 'like', ['ア%','イ%','ウ%', 'エ%', 'オ%'])->get();
+        return  view('admin.jewelry.search', ['posts' => $posts, 'posts2'=> $posts2]);
     }
 }

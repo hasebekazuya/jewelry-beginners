@@ -22,173 +22,23 @@
                 <section>
                     <h3 class="stonename">宝石名一覧（五十音順）</h2>
                     <h4>ア行</h4>
-                    <div class="stonename1">
+                    @foreach($posts as $gem)
                         <ul>
                             <li>
-                                <a href="" target="_blank">アイオライト</a>
+                                <a href="{{ route('admin.jewelry.show', ['id' => $gem->id]) }}" target="_blank">{{$gem->gem_name}}</a>
                             </li>
                         </ul>
-                        <ul>
-                            <li>
-                                <a href="" target="_blank">アクアマリン</a>
-                            </li>
-                        </ul>
-                        <ul>
-                            <li>
-                                <a href="" target="_blank">アメシスト</a>
-                            </li>
-                        </ul>
-                        <ul>
-                            <li>
-                                <a href="" target="_blank">アレキサンドライト</a>
-                            </li>
-                        </ul>
-                        <ul>
-                            <li>
-                                <a href="" target="_blank">アメトリン</a>
-                            </li>
-                        </ul>
-                        <ul>
-                            <li>
-                                <a href="" target="_blank">エメラルド</a>
-                            </li>
-                        </ul>
-                        <ul>
-                            <li>
-                                <a href="" target="_blank">オパール</a>
-                            </li>
-                        </ul>
-                    </div>
+                    @endforeach
+                     <div class="col-md-8 mx-auto">
+                
                     <h4>カ行</h4>
-                    <div class="stonename1">
+                    @foreach($posts2 as $gem)
                         <ul>
                             <li>
-                                <a href="" target="_blank">ガーネット</a>
+                                <a href="{{ route('admin.jewelry.show', ['id' => $gem->id]) }}" target="_blank">{{$gem->gem_name}}</a>
                             </li>
                         </ul>
-                        <ul>
-                            <li>
-                                <a href="" target="_blank">クリソベリル・キャッツアイ</a>
-                            </li>
-                        </ul>
-                        <ul>
-                            <li>
-                                <a href="" target="_blank">クンツァイト</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <h4>サ行</h4>
-                    <div class="stonename1">
-                        <ul>
-                            <li>
-                                <a href="" target="_blank">サファイア</a>
-                            </li>
-                        </ul>
-                        <ul>
-                            <li>
-                                <a href="" target="_blank">サードオニックス</a>
-                            </li>
-                        </ul>
-                        <ul>
-                            <li>
-                                <a href="" target="_blank">サンゴ-珊瑚(コーラル)</a>
-                            </li>
-                        </ul>
-                        <ul>
-                            <li>
-                                <a href="" target="_blank">ジェダイト(ヒスイ)</a>
-                            </li>
-                        </ul>
-                        <ul>
-                            <li>
-                                <a href="" target="_blank">シトリン</a>
-                            </li>
-                        </ul>
-                        <ul>
-                            <li>
-                                <a href="" target="_blank">ジルコン</a>
-                            </li>
-                        </ul>
-                        <ul>
-                            <li>
-                                <a href="" target="_blank">スピネル</a>
-                            </li>
-                        </ul>
-                        <ul>
-                            <li>
-                                <a href="" target="_blank">スフェーン</a>
-                            </li>
-                        </ul>
-                    </div>    
-                    <h4>タ行</h4>
-                     <div class="stonename1">   
-                        <ul>
-                            <li>
-                                <a href="" target="_blank">ダイヤモンド</a>
-                            </li>
-                        </ul>
-                        <ul>
-                            <li>
-                                <a href="" target="_blank">タンザナイト</a>
-                            </li>
-                        </ul>
-                        <ul>
-                            <li>
-                                <a href="" target="_blank">トパーズ</a>
-                            </li>
-                        </ul>
-                        <ul>
-                            <li>
-                                <a href="" target="_blank">トルコ石(ターコイズ)</a>
-                            </li>
-                        </ul>
-                        <ul>
-                            <li>
-                                <a href="" target="_blank">トルマリン</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <h4>ハ行・マ行</h4>
-                     <div class="stonename1">   
-                        <ul>
-                            <li>
-                                <a href="" target="_blank">パール(真珠)</a>
-                            </li>
-                        </ul>
-                        <ul>
-                            <li>
-                                <a href="" target="_blank">ブラッドストーン</a>
-                            </li>
-                        </ul>
-                        <ul>
-                            <li>
-                                <a href="" target="_blank">ペリドット</a>
-                            </li>
-                        </ul>
-                        <ul>
-                            <li>
-                                <a href="" target="_blank">ムーン・ストーン</a>
-                            </li>
-                        </ul>
-                        <ul>
-                            <li>
-                                <a href="" target="_blank">モルガナイト</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <h4>ラ行</h4>
-                     <div class="stonename1">   
-                        <ul>
-                            <li>
-                                <a href="" target="_blank">ラピスラズリ</a>
-                            </li>
-                        </ul>
-                        <ul>
-                            <li>
-                                <a href="" target="_blank">ルビー</a>
-                            </li>
-                        </ul>
-                    </div>
+                    @endforeach
                 </section>
             </div>
         </div>
