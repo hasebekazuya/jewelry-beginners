@@ -106,20 +106,55 @@ class JewelryController extends Controller
     public function birth(Request $reqest)
     {
         $posts =  Gem::where(function($query){
-        $query->orWhere('gem_name', 'like', 'ア%')
-              ->orWhere('gem_name', 'like', 'イ%')
-              ->orWhere('gem_name', 'like', 'ウ%')
-              ->orWhere('gem_name', 'like', 'エ%')
-              ->orWhere('gem_name', 'like', 'オ%');
+        $query->orWhere('birthstone', 'like', '1%');
               })->get();
+              
         $posts2 =  Gem::where(function($query){
-        $query->orWhere('gem_name', 'like', 'カ%')
-              ->orWhere('gem_name', 'like', 'キ%')
-              ->orWhere('gem_name', 'like', 'ク%')
-              ->orWhere('gem_name', 'like', 'ケ%')
-              ->orWhere('gem_name', 'like', 'コ%');
-              })->get();      
-        return view('admin.jewelry.birth',['posts' => $posts, 'posts2' => $posts2]);
+        $query->orWhere('birthstone', 'like', '2%');
+              })->get();
+              
+        $posts3 =  Gem::where(function($query){
+        $query->orWhere('birthstone', 'like', '3%');
+              })->get();
+              
+        $posts4 =  Gem::where(function($query){
+        $query->orWhere('birthstone', 'like', '4%');
+              })->get();
+              
+        $posts5 =  Gem::where(function($query){
+        $query->orWhere('birthstone', 'like', '5%');
+              })->get();
+              
+        $posts6 =  Gem::where(function($query){
+        $query->orWhere('birthstone', 'like', '6%');
+              })->get();
+              
+        $posts7 =  Gem::where(function($query){
+        $query->orWhere('birthstone', 'like', '7%');
+              })->get();
+              
+        $posts8 =  Gem::where(function($query){
+        $query->orWhere('birthstone', 'like', '8%');
+              })->get();
+              
+        $posts9 =  Gem::where(function($query){
+        $query->orWhere('birthstone', 'like', '9%');
+              })->get();
+              
+        $posts10 =  Gem::where(function($query){
+        $query->orWhere('birthstone', 'like', '10%');
+              })->get();
+              
+        $posts11 =  Gem::where(function($query){
+        $query->orWhere('birthstone', 'like', '11%');
+              })->get();
+              
+        $posts12 =  Gem::where(function($query){
+        $query->orWhere('birthstone', 'like', '12%');
+              })->get(); 
+              
+        return view('admin.jewelry.birth',['posts' => $posts, 'posts2' => $posts2, 'posts3' => $posts3, 'posts4' => $posts4, 'posts5' => $posts5, 'posts6' => $posts6, 
+                                          'posts7' => $posts7, 'posts8' => $posts8, 'posts9' => $posts9, 'posts10' => $posts10, 'posts11' => $posts11, 'posts12' => $posts12,]);
     }
     
     public function search(Request $request)
@@ -141,6 +176,7 @@ class JewelryController extends Controller
               ->orWhere('gem_name', 'like', 'エ%')
               ->orWhere('gem_name', 'like', 'オ%');
               })->get();
+              
         $posts2 = Gem::where(function($query){
         $query->orWhere('gem_name', 'like', 'カ%')
               ->orWhere('gem_name', 'like', 'キ%')
@@ -148,13 +184,15 @@ class JewelryController extends Controller
               ->orWhere('gem_name', 'like', 'ケ%')
               ->orWhere('gem_name', 'like', 'コ%');
             })->get();
+            
         $posts3 = Gem::where(function($query){
         $query->orWhere('gem_name', 'like', 'サ%')
               ->orWhere('gem_name', 'like', 'シ%')
               ->orWhere('gem_name', 'like', 'ス%')
               ->orWhere('gem_name', 'like', 'セ%')
               ->orWhere('gem_name', 'like', 'ソ%');
-            })->get(); 
+            })->get();
+            
         $posts4 = Gem::where(function($query){
         $query->orWhere('gem_name', 'like', 'タ%')
               ->orWhere('gem_name', 'like', 'チ%')
@@ -162,6 +200,7 @@ class JewelryController extends Controller
               ->orWhere('gem_name', 'like', 'テ%')
               ->orWhere('gem_name', 'like', 'ト%');
             })->get();
+            
         $posts5 = Gem::where(function($query){
         $query->orWhere('gem_name', 'like', 'ナ%')
               ->orWhere('gem_name', 'like', 'ニ%')
@@ -174,6 +213,7 @@ class JewelryController extends Controller
               ->orWhere('gem_name', 'like', 'ラ%')
               ->orWhere('gem_name', 'like', 'ワ%');
             })->get();
+            
         $posts6 = Gem::where(function($query){
         $query->orWhere('gem_name', 'like', 'ラ%')
               ->orWhere('gem_name', 'like', 'リ%')

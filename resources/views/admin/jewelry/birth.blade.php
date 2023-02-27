@@ -14,7 +14,7 @@
                     <span class="menu_line"></span>
              </li>
         </ul>
-        </nav
+        </navs>
         <div class="stonename">
             <div class="col-md-8 mx-auto">
                 <section>
@@ -28,5 +28,15 @@
                     @foreach($posts2 as $gem)
                         <a href="{{ route('admin.jewelry.show', ['id' => $gem->id]) }}" target="_blank">{{$gem->gem_name}}</a>
                     @endforeach
-                    
+                     <h4>3月</h4>
+                    @foreach($posts3 as $gem)
+                        <a href="{{ route('admin.jewelry.show', ['id' => $gem->id]) }}" target="_blank">{{$gem->gem_name}}</a>
+                    @endforeach
+                     <h4>4月</h4>
+                    @foreach($posts4 as $gem)
+                        <a href="{{ route('admin.jewelry.show', ['id' => $gem->id]) }}" target="_blank">{{$gem->gem_name}}</a>
+                    @endforeach
+                </section>
+            </div>
+        </div>    
   @endsection                  
