@@ -20,22 +20,14 @@
                 <section>
                     <h3 class="stonename">誕生石一覧</h2>
                         <p>1月から12月までに指定されている誕生石を一覧表でまとめました。宝石名をクリックすると詳細を見ることができます。</p>
-                    <h4>1月</h4>
-                    @foreach($posts as $gem)
-                        <a href="{{ route('admin.jewelry.show', ['id' => $gem->id]) }}" target="_blank">{{$gem->gem_name}}</a>
-                    @endforeach
-                    <h4>2月</h4>
-                    @foreach($posts2 as $gem)
-                        <a href="{{ route('admin.jewelry.show', ['id' => $gem->id]) }}" target="_blank">{{$gem->gem_name}}</a>
-                    @endforeach
-                     <h4>3月</h4>
-                    @foreach($posts3 as $gem)
-                        <a href="{{ route('admin.jewelry.show', ['id' => $gem->id]) }}" target="_blank">{{$gem->gem_name}}</a>
-                    @endforeach
-                     <h4>4月</h4>
-                    @foreach($posts4 as $gem)
-                        <a href="{{ route('admin.jewelry.show', ['id' => $gem->id]) }}" target="_blank">{{$gem->gem_name}}</a>
-                    @endforeach
+                        @for ($i = 1; $i <= 12; $i++)
+                            <h4>{{$i}}月</h4>
+                            @foreach($posts as $gem)
+                                @if($gem->birthstone == $i)
+                                <a href="{{ route('admin.jewelry.show', ['id' => $gem->id]) }}" target="_blank">{{$gem->gem_name}}</a>
+                                @endif
+                            @endforeach
+                        @endfor
                 </section>
             </div>
         </div>    
