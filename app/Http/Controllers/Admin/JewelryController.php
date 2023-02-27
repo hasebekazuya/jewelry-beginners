@@ -105,7 +105,21 @@ class JewelryController extends Controller
     
     public function birth(Request $reqest)
     {
-        return view('admin.jewelry.birth');
+        $posts =  Gem::where(function($query){
+        $query->orWhere('gem_name', 'like', 'ア%')
+              ->orWhere('gem_name', 'like', 'イ%')
+              ->orWhere('gem_name', 'like', 'ウ%')
+              ->orWhere('gem_name', 'like', 'エ%')
+              ->orWhere('gem_name', 'like', 'オ%');
+              })->get();
+        $posts2 =  Gem::where(function($query){
+        $query->orWhere('gem_name', 'like', 'カ%')
+              ->orWhere('gem_name', 'like', 'キ%')
+              ->orWhere('gem_name', 'like', 'ク%')
+              ->orWhere('gem_name', 'like', 'ケ%')
+              ->orWhere('gem_name', 'like', 'コ%');
+              })->get();      
+        return view('admin.jewelry.birth',['posts' => $posts, 'posts2' => $posts2]);
     }
     
     public function search(Request $request)

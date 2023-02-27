@@ -15,3 +15,18 @@
              </li>
         </ul>
         </nav
+        <div class="stonename">
+            <div class="col-md-8 mx-auto">
+                <section>
+                    <h3 class="stonename">誕生石一覧</h2>
+                        <p>1月から12月までに指定されている誕生石を一覧表でまとめました。宝石名をクリックすると詳細を見ることができます。</p>
+                    <h4>1月</h4>
+                    @foreach($posts as $gem)
+                        <a href="{{ route('admin.jewelry.show', ['id' => $gem->id]) }}" target="_blank">{{$gem->gem_name}}</a>
+                    @endforeach
+                    <h4>2月</h4>
+                    @foreach($posts2 as $gem)
+                        <a href="{{ route('admin.jewelry.show', ['id' => $gem->id]) }}" target="_blank">{{$gem->gem_name}}</a>
+                    @endforeach
+                    
+  @endsection                  

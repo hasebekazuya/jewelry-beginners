@@ -23,51 +23,27 @@
                     <h3 class="stonename">宝石名一覧（五十音順）</h2>
                     <h4>ア行</h4>
                     @foreach($posts as $gem)
-                        <ul>
-                            <li>
-                                <a href="{{ route('admin.jewelry.show', ['id' => $gem->id]) }}" target="_blank">{{$gem->gem_name}}</a>
-                            </li>
-                        </ul>
+                        <a href="{{ route('admin.jewelry.show', ['id' => $gem->id]) }}" target="_blank">{{$gem->gem_name}}</a>
                     @endforeach
                     <h4>カ行</h4>
                     @foreach($posts2 as $gem)
-                        <ul>
-                            <li>
-                                <a href="{{ route('admin.jewelry.show', ['id' => $gem->id]) }}" target="_blank">{{$gem->gem_name}}</a>
-                            </li>
-                        </ul>
+                        <a href="{{ route('admin.jewelry.show', ['id' => $gem->id]) }}" target="_blank">{{$gem->gem_name}}</a>
                     @endforeach
                     <h4>サ行</h4>
                     @foreach($posts3 as $gem)
-                        <ul>
-                            <li>
-                                <a href="{{ route('admin.jewelry.show', ['id' => $gem->id]) }}" target="_blank">{{$gem->gem_name}}</a>
-                            </li>
-                        </ul>
+                        <a href="{{ route('admin.jewelry.show', ['id' => $gem->id]) }}" target="_blank">{{$gem->gem_name}}</a>
                     @endforeach
                     <h4>タ行</h4>
                     @foreach($posts4 as $gem)
-                        <ul>
-                            <li>
-                                <a href="{{ route('admin.jewelry.show', ['id' => $gem->id]) }}" target="_blank">{{$gem->gem_name}}</a>
-                            </li>
-                        </ul>
+                        <a href="{{ route('admin.jewelry.show', ['id' => $gem->id]) }}" target="_blank">{{$gem->gem_name}}</a>
                     @endforeach
                     <h4>マ・ハ行</h4>
                     @foreach($posts5 as $gem)
-                        <ul>
-                            <li>
-                                <a href="{{ route('admin.jewelry.show', ['id' => $gem->id]) }}" target="_blank">{{$gem->gem_name}}</a>
-                            </li>
-                        </ul>
+                       <a href="{{ route('admin.jewelry.show', ['id' => $gem->id]) }}" target="_blank">{{$gem->gem_name}}</a>
                     @endforeach
                     <h4>ラ行</h4>
                     @foreach($posts6 as $gem)
-                        <ul>
-                            <li>
-                                <a href="{{ route('admin.jewelry.show', ['id' => $gem->id]) }}" target="_blank">{{$gem->gem_name}}</a>
-                            </li>
-                        </ul>
+                        <a href="{{ route('admin.jewelry.show', ['id' => $gem->id]) }}" target="_blank">{{$gem->gem_name}}</a>
                     @endforeach
                 </section>
             </div>
