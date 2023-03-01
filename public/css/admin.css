@@ -48,3 +48,7 @@ body {
   border: #000;
   background-color: #CCFFFF;
 }
+
+.nav-link {
+  color: #000;
+}

@@ -31,11 +31,14 @@
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     
                         <ul class="navbar-nav ms-auto">
-
+                            
                         </ul>
 
                         <ul class="navbar-nav">
-                            @guest
+                            <li>
+                                <a class="nav-link" href="{{ route('register') }}">登録</a>
+                            </li>
+                        @guest
                             <li><a class="nav-link" href="{{ route('login') }}">{{ __('messages.login') }}</a></li>
                         
                         @else
