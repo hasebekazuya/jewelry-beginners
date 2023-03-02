@@ -4,7 +4,7 @@
 @section('content')
     <div class="container">
         <div class="row">
-            <h2 class="contents__title">豆知識</h2>
+            <h2 class="contents__title">★豆知識</h2>
         </div>
         <nav class="header_list_index">
              <ul>

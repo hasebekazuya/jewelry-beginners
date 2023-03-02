@@ -15,7 +15,7 @@
                     <span class="menu_line"></span>
                 </li>
                 <li>
-                    <a href="{{ route('admin.jewelry.search') }}">宝石から探す</a>
+                    <a href="{{ route('admin.jewelry.search') }}">★宝石から探す</a>
                  <span class="menu_border"></span>
                     <span class="menu_line"></span>
                 </li>
@@ -75,7 +75,12 @@
                             </tr>
                     </table>
                     <div>
-                        <input type="submit" class="btn-btn-primary" value="お気に入り">
+                        <form action="{{ route('admin.favorite.create') }}" method="post">
+                            {{csrf_field()}}
+                            <input type="hidden" name="gem_id" value="{{$gem->id}}">
+                            <input type="submit" class="btn-btn-primary" value="お気に入り">
+                        </form>
+                        
                     </div>
                 </div>
             </div>

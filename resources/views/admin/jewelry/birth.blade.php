@@ -18,7 +18,7 @@
         <div class="stonename">
             <div class="col-md-8 mx-auto">
                 <section>
-                    <h3 class="stonename">誕生石一覧</h2>
+                    <h3 class="stonename">★誕生石一覧</h2>
                         <p>1月から12月までに指定されている誕生石を一覧表でまとめました。宝石名をクリックすると詳細を見ることができます。</p>
                         @for ($i = 1; $i <= 12; $i++)
                             <h4>{{$i}}月</h4>

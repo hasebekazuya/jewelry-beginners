@@ -15,8 +15,8 @@ return new class extends Migration
     {
         Schema::create('favorites', function (Blueprint $table) {
             $table->id();
-            $table->integer('users_id');
-            $table->integer('gems_id');
+            $table->integer('user_id');
+            $table->integer('gem_id');
             $table->timestamps();
         });
     }

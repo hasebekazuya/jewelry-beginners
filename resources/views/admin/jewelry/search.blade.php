@@ -20,7 +20,8 @@
         <div class="stonename">
             <div class="col-md-8 mx-auto">
                 <section>
-                    <h3 class="stonename">宝石名一覧（五十音順）</h2>
+                    <h3 class="stonename">★宝石名一覧（五十音順）</h2>
+                    <p>宝石名をクリックすると詳細を見ることができます。</p>
                     <h4>ア行</h4>
                     @foreach($posts as $gem)
                         <a href="{{ route('admin.jewelry.show', ['id' => $gem->id]) }}" target="_blank">{{$gem->gem_name}}</a>

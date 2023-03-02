@@ -15,7 +15,7 @@
                     <br/>
                     <div class="search_list2">
                         <a href="{{ route('admin.jewelry.trivia') }}">豆知識</a>
-                        <a href="">お気に入り</a>
+                        <a href="{{ route('admin.favorite.index') }}">お気に入り</a>
                     </div>    
                 </div>    
             </div> 

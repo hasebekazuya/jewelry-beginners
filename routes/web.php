@@ -43,6 +43,17 @@ Route::controller(JewelryController::class)->prefix('admin')->name('admin.')->mi
     })->name('jewelry.top');
     
 });
+
+use App\Http\Controllers\Admin\FavoriteController;
+
+Route::controller(FavoriteController::class)->prefix('admin')->name('admin.')->middleware('auth')->group(function() {
+    Route::get('favorite/create', 'add')->name('jewelry.add');
+    Route::post('favorite/create', 'create')->name('favorite.create');
+    Route::get('favorite/index','index')->name('favorite.index');
+    Route::get('favorite/delete','delete')->name('favorite.delete');
+}); 
+
+
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

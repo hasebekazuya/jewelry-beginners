@@ -1,16 +1,9 @@
 @extends('layouts.admin')
-@section('title', 'お気に入り画面')
+@section('title', 'お気に入り登録')
 
 @section('content')
     <div class="container">
                     
         <div class="row">
-            <h2>お気に入り</h2>
+            <h2>お気に入り登録</h2>
         </div>
-         <nav class="header_list_index">
-            <ul>
-                <li>
-                    <a href="{{ route('admin.jewelry.top') }}">Top</a>
-                </li>
-            </ul>
-        </nav> 

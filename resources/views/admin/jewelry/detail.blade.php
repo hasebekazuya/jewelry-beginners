@@ -19,7 +19,7 @@
         <div class="row">
             <div class="col-md-10 mx-auto">
                 <div class="row">
-                    <h3 class="content_subtitle">ジュエリーとは？</h3>
+                    <h3 class="content_subtitle">★ジュエリーとは？</h3>
                         <p>ここでは装身具に使用する素材に制限のあるもので、地金には金・銀・プラチナ類を使用し、天然・人口の宝石素材のみ使用したものと定義します。<br />
                         この意味で宝飾品とジュエリーとは同義語です。</p>
                 </div>        
