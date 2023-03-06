@@ -23,29 +23,17 @@
                     <h3 class="stonename">★宝石名一覧（五十音順）</h3>
                     <p>宝石名をクリックすると詳細を見ることができます。</p>
                     <h4>ア行</h4>
-                    @foreach($posts as $gem)
-                        <a href="{{ route('admin.jewelry.show', ['id' => $gem->id]) }}" target="_blank">{{$gem->gem_name}}</a>
+                    @foreach($katakana as $kana )
+                        {{ $kana [0] }}行
+                        @foreach($posts as $gem)
+                           @if(mb_strpos($kana[1],$gem,0)!==false){
+		                    	return $kana [0];
+	                    	}
+                            <a href="{{ route('admin.jewelry.show', ['id' => $gem->id]) }}" target="_blank">{{$gem->gem_name}}</a>
+                            @endif
+                        @endforeach
                     @endforeach
-                    <h4>カ行</h4>
-                    @foreach($posts2 as $gem)
-                        <a href="{{ route('admin.jewelry.show', ['id' => $gem->id]) }}" target="_blank">{{$gem->gem_name}}</a>
-                    @endforeach
-                    <h4>サ行</h4>
-                    @foreach($posts3 as $gem)
-                        <a href="{{ route('admin.jewelry.show', ['id' => $gem->id]) }}" target="_blank">{{$gem->gem_name}}</a>
-                    @endforeach
-                    <h4>タ行</h4>
-                    @foreach($posts4 as $gem)
-                        <a href="{{ route('admin.jewelry.show', ['id' => $gem->id]) }}" target="_blank">{{$gem->gem_name}}</a>
-                    @endforeach
-                    <h4>ナ・ハ・マ行</h4>
-                    @foreach($posts5 as $gem)
-                       <a href="{{ route('admin.jewelry.show', ['id' => $gem->id]) }}" target="_blank">{{$gem->gem_name}}</a>
-                    @endforeach
-                    <h4>ラ行</h4>
-                    @foreach($posts6 as $gem)
-                        <a href="{{ route('admin.jewelry.show', ['id' => $gem->id]) }}" target="_blank">{{$gem->gem_name}}</a>
-                    @endforeach
+                
                 </section>
             </div>
         </div>
