@@ -106,26 +106,65 @@ class JewelryController extends Controller
     public function birth(Request $reqest)
     {
         $posts = Gem::all();
+        
         return view('admin.jewelry.birth',['posts' => $posts]);
     
     }
     public function search(Request $request)
     {
         $katakana=array(
-        	array('ア','アイウエオ'),
-        	array('カ','カキクケコガギグゲゴ'),
-        	array('サ','サシスセソザジズゼゾ'),
-        	array('タ','タチツテトダヂヅデド'),
-        	array('ナ','ナニヌネノ'),
-        	array('ハ','ハヒフヘホバビブベボパピプペポ'),
-        	array('マ','マミムメモ'),
-        	array('ヤ','ヤユヨ'),
-        	array('ラ','ラリルレロ'),
-        	array('ワ','ワヲン')
+            'ア' => [],
+            'カ' => [],
+            'サ' => [],
+            'タ' => [],
+            'ナ' => [],
+            'ハ' => [],
+            'マ' => [],
+            'ヤ' => [],
+            'ラ' => [],
+            'ワ' => []
 	    );
-       
-        $posts = Gem::all();
-        
-        return  view('admin.jewelry.search', ['posts' => $posts, 'katakana' => $katakana]);
+       //dd($katakana);
+        $gems = Gem::all();
+        //$gem = $gems[1];
+        //dd($gem);
+        foreach($gems as $gem) {
+            $head = $this->syllabary($gem->gem_name);
+            //dd($head);
+            array_push($katakana[$head], $gem);
+            //dd($katakana);
+        }
+        //dd($katakana);
+        return  view('admin.jewelry.search', ['katakana' => $katakana]);
     }
+    function syllabary($str){
+    	$charset='utf-8';
+    	if(empty($str)){
+    		return false;
+    	}
+    	$str=trim($str);
+    	
+    	$katakana=array(
+    		array('ア','アイウエオ'),
+    		array('カ','カキクケコガギグゲゴ'),
+    		array('サ','サシスセソザジズゼゾ'),
+    		array('タ','タチツテトダヂヅデド'),
+    		array('ナ','ナニヌネノ'),
+    		array('ハ','ハヒフヘホバビブベボパピプペポ'),
+    		array('マ','マミムメモ'),
+    		array('ヤ','ヤユヨ'),
+    		array('ラ','ラリルレロ'),
+    		array('ワ','ワヲン')
+    	);
+		$arr=$katakana;
+		$str=mb_convert_kana($str,$charset);
+    	
+    	$head=mb_substr($str,0,1,$charset);
+    	foreach($arr as $v){
+    		if(mb_strpos($v[1],$head,0,$charset)!==false){
+    			return $v[0];
+    		}
+    	}
+    }
+
 }

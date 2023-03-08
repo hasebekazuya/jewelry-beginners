@@ -22,18 +22,24 @@
                 <section>
                     <h3 class="stonename">★宝石名一覧（五十音順）</h3>
                     <p>宝石名をクリックすると詳細を見ることができます。</p>
-                    <h4>ア行</h4>
-                    @foreach($katakana as $kana )
-                        {{ $kana [0] }}行
-                        @foreach($posts as $gem)
-                           @if(mb_strpos($kana[1],$gem,0)!==false){
-		                    	return $kana [0];
-	                    	}
-                            <a href="{{ route('admin.jewelry.show', ['id' => $gem->id]) }}" target="_blank">{{$gem->gem_name}}</a>
-                            @endif
-                        @endforeach
-                    @endforeach
-                
+                    <table class="msr_table02">
+                        <thead>
+                            <tr>
+                                <th>各行</th>
+                                <th>宝石名</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach($katakana as $key =>$gems)
+                            <tr>
+                                <td><h4>{{ $key}}行</h4></td>
+                                @foreach($gems as $gem)
+                                    <td><a href="{{ route('admin.jewelry.show', ['id' => $gem->id]) }}" target="_blank">{{$gem->gem_name}}</a></td>
+                                @endforeach
+                            </tr>    
+                            @endforeach
+                        </tbody>
+                    </table>  
                 </section>
             </div>
         </div>
