@@ -9,7 +9,8 @@
         <nav class="header_list_index">
         <ul>
              <li>
-                <a href="{{ route('admin.jewelry.top') }}">Top</a>
+                <a href="{{ route('admin.jewelry.top') }}" class="btn-flat-simple">
+                    <i class="fa fa-caret-right"></i>Top</a>
                     <span class="menu_border"></span>
                     <span class="menu_line"></span>
              </li>
@@ -31,11 +32,16 @@
                                 @for ($i = 1; $i <= 12; $i++)
                                 <tr>
                                     <td><h4>{{$i}}月</h4></td>
+                                    <?php $count=0; ?>
                                     @foreach($posts as $gem)
                                         @if($gem->birthstone == $i)
                                             <td><a href="{{ route('admin.jewelry.show', ['id' => $gem->id]) }}" target="_blank">{{$gem->gem_name}}</a></td>
+                                        <?php $count++; ?>
                                         @endif
                                     @endforeach
+                                    @for($j=1; $j<=(4-$count); $j++)
+                                    <td></td>
+                                    @endfor
                                 </tr>    
                                 @endfor
                             </tbody>
