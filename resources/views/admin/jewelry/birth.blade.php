@@ -25,7 +25,7 @@
                             <thead>
                                 <tr>
                                     <th>各月</th>
-                                    <th>宝石名</th>
+                                    <th colspan="4">宝石名</th>
                                 </tr>
                             </thead>
                             <tbody>

@@ -9,7 +9,8 @@
         <nav class="header_list_index">
              <ul>
                 <li>
-                    <a href="{{ route('admin.jewelry.top') }}">Top</a>
+                    <a href="{{ route('admin.jewelry.top') }}"class="btn-flat-simple">
+                    <i class="fa fa-caret-right"></i>>Top</a>
                     <span class="menu_border"></span>
                     <span class="menu_line"></span>
                 </li>

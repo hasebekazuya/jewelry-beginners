@@ -17,6 +17,10 @@
         <link href="{{ secure_asset('css/app.css') }}" rel="stylesheet">
         <link href="{{ secure_asset('css/admin.css') }}" rel="stylesheet">
         <link href="{{ secure_asset('css/birth.css') }}" rel="stylesheet">
+        <link href="{{ secure_asset('css/trivia.css') }}" rel="stylesheet">
+        <link href="{{ secure_asset('css/search.css') }}" rel="stylesheet">
+        <link href="{{ secure_asset('css/detail.css') }}" rel="stylesheet">
+        <link href="{{ secure_asset('css/show.css') }}" rel="stylesheet">
     </head>
     <body>
         <div id="app">
@@ -61,7 +65,6 @@
                                 </div>
                             </li>
                             @endguest
-    
                         </ul>
                     </div>
                 </div>

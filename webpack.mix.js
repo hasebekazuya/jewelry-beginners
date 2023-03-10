@@ -15,4 +15,8 @@ mix.js('resources/js/app.js', 'public/js')
     .sass('resources/sass/app.scss', 'public/css')
     .sass('resources/sass/admin.scss', 'public/css')
     .sass('resources/sass/birth.scss', 'public/css')
+    .sass('resources/sass/search.scss', 'public/css')
+    .sass('resources/sass/trivia.scss', 'public/css')
+    .sass('resources/sass/detail.scss', 'public/css')
+    .sass('resources/sass/show.scss', 'public/css')
     .sourceMaps();

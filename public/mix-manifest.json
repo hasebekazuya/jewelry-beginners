@@ -1,6 +1,10 @@
 {
     "/js/app.js": "/js/app.js",
     "/css/app.css": "/css/app.css",
+    "/css/trivia.css": "/css/trivia.css",
+    "/css/search.css": "/css/search.css",
     "/css/birth.css": "/css/birth.css",
-    "/css/admin.css": "/css/admin.css"
+    "/css/admin.css": "/css/admin.css",
+    "/css/show.css": "/css/show.css",
+    "/css/detail.css": "/css/detail.css"
 }
