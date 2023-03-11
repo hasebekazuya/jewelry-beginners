@@ -10,12 +10,12 @@
          <nav class="header_list_index">
             <ul>
                 <li>
-                    <a href="{{ route('admin.jewelry.top') }}">Top</a>
+                    <a href="{{ route('admin.jewelry.top') }}" class="btn-flat-simple">Top</a>
                     <span class="menu_border"></span>
                     <span class="menu_line"></span>
                 </li>
                 <li>
-                    <a href="{{ route('admin.jewelry.search') }}">★宝石から探す</a>
+                    <a href="{{ route('admin.jewelry.search') }}" class="btn-flat-simple">★宝石から探す</a>
                  <span class="menu_border"></span>
                     <span class="menu_line"></span>
                 </li>

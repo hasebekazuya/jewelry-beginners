@@ -29,8 +29,8 @@
   width: 65%;
   height: 3px;
   content: '';
-  background-image: -webkit-linear-gradient(315deg, #704308 0%, #ffce08 40%, #e1ce08 60%, #704308 80%);
-  background-image: linear-gradient(135deg, #704308 0%, #ffce08 40%, #e1ce08 60%, #704308 80%);
+  background-image: -webkit-linear-gradient(315deg, #704308 0%, #ffce08 40%, #e1ce08 60%, #704308 100%);
+  background-image: linear-gradient(135deg, #704308 0%, #ffce08 40%, #e1ce08 60%, #704308 100%);
 }
 
 .content_subtitle:before {
@@ -67,6 +67,6 @@
 }
 
 .image {
-  width: 70%;    /* 横幅を割合で指定 */
-  height: auto;  /* 高さは自動指定 */
+  width: 31%;    /* 横幅を割合で指定 */
+    height: auto;  /* 高さは自動指定 */
 }

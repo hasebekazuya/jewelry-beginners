@@ -1,7 +1,7 @@
 .btn-flat-simple {
   position: relative;
   display: inline-block;
-  font-weight: bold;
+  font-weight: lighter;
   padding: 0.25em 0.5em;
   text-decoration: none;
   color: #00BCD4;
@@ -14,7 +14,10 @@
   color: white;
 }
 
+.contents__title {
+  
+}
 .image {
-  width: 70px;    /* 横幅を割合で指定 */
+  width: 75px;    /* 横幅を割合で指定 */
   height: auto;  /* 高さは自動指定 */
 }
