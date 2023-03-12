@@ -77,7 +77,7 @@
                         <br/>
                 </dl> 
                 <div class="image">
-                    <img src="{{ secure_asset('imag/73573766ece3f977642aae8407a054e7.jpg') }}">
+                    <img src="{{ secure_asset('imag/73573766ece3f977642aae8407a054e7.jpg') }}" class="image_size">
                </div>
             <h3 class="content_subtitle">金属の種類</h3>
                 <dl>

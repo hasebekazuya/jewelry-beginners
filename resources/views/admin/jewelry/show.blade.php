@@ -21,67 +21,36 @@
                 </li>
             </ul>
         </nav> 
-        <div class="row">
-            <div class="list-jewelry col-md-8 mx-auto">
-                <table class="table-table-light table-hover">
-                    <tr>
-                        <th width="20%">宝石名</th>
-                    </tr>
-                    <tr>
-                        <td>{{ $gem->gem_name }}</td>
-                    </tr>
-                    <tr>
-                        <th width="20%">化学組成</th>
-                    </tr>  
-                    <tr>
-                        <td>{{ $gem->chemical_composition }}</td>
-                    </tr>
-                    <tr>
-                        <th width="20%">モース硬度</th>
-                    </tr>
-                    <tr>
-                        <td>{{ $gem->mohs_hardness }}</td>
-                    </tr> 
-                    <tr>
-                        <th width="20%">概要</th>
-                    </tr>
-                    <tr>
-                        <td>{{ $gem->overview }}</td>
-                    </tr> 
-                     <tr>
-                        <th width="20%">お手入れ</th>
-                    </tr>
-                    <tr>
-                        <td>{{ $gem->maintenance }}</td>
-                    </tr>
-                     <tr>
-                        <th width="20%">まとめ＆注意点</th>
-                    </tr>
-                    <tr>
-                        <td>{{ $gem->summary_notes }}</td>
-                    </tr>
-                    <tr>
-
-                    <tr>
-                     <div class="image">    
-                     <img src="{{ secure_asset('storage/image/' . $gem->image_path) }}">
-                    </tr>
-                    <tr>
-                        <th width="20%">誕生石月</th>
-                    </tr>
-                    <tr>
-                        <td>{{ $gem->birthstone }}</td>
-                    </tr>
-                </table>
-                    <div>
-                        <form action="{{ route('admin.favorite.create') }}" method="post">
-                            {{csrf_field()}}
-                            <input type="hidden" name="gem_id" value="{{$gem->id}}">
-                            <input type="submit" class="btn-btn-primary" value="お気に入り">
-                        </form>
-                        
-                    </div>
-                </div>
+        <div class="list-jewelry col-md-10 mx-auto">
+            <div class="image">    
+                <img src="{{ secure_asset('storage/image/' . $gem->image_path) }}">
+            </div> 
+            <h4 class="content">宝石名</h4>
+                <p>{{ $gem->gem_name }}</p>
+                <br/>
+            <h4 class="content">化学組成</h4>
+                <p>{{ $gem->chemical_composition }}</p>
+                <br/>
+            <h4 class="content">モース硬度</h4>
+                <p>{{ $gem->mohs_hardness }}</p>
+                <br/>
+            <h4 class="content">概要</h4>
+                <p>{{ $gem->overview }}</p>
+                <br/>
+            <h4 class="content">お手入れ</h4>
+                <p>{{ $gem->maintenance }}</p>
+                <br/>
+            <h4 class="content">まとめ＆注意点</h4>
+                <p>{{ $gem->summary_notes }}</p>
+                <br/>
+            <h4 class="content">誕生石月</h4>
+                <p>{{ $gem->birthstone }}</p>
+            <div>
+                <form action="{{ route('admin.favorite.create') }}" method="post">
+                    {{csrf_field()}}
+                    <input type="hidden" name="gem_id" value="{{$gem->id}}">
+                    <input type="submit" class="btn-btn-primary" value="お気に入り">
+                </form>
             </div>
         </div>
     </div>

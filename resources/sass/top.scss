@@ -9,25 +9,29 @@
   height: 170px;
   background-color: #EEEEEE;
   cursor: pointer;
+
+  &:hover {
+  color: #fff;
+  background: #FFEFD5;
+  }
+  
   transition: all 0.6s ease;
   display: inline-block;
   margin: 10px;
 }
-.search_list1:hover {
-  color: #fff;
-  background: #FFEFD5;
-}
 
-.search_list2 {
+ .search_list2 {
   width: 170px;
   height: 170px;
   background-color: #EEEEEE;
   cursor: pointer;
+
+  &:hover {
+  color: #fff;
+  background: #FFEFD5;
+  }
+  
   transition: all 0.6s ease;
   display: inline-block;
   margin: 10px;
-}
-.search_list2:hover {
-  color: #fff;
-  background: #FFEFD5;
 }

@@ -19,4 +19,5 @@ mix.js('resources/js/app.js', 'public/js')
     .sass('resources/sass/trivia.scss', 'public/css')
     .sass('resources/sass/detail.scss', 'public/css')
     .sass('resources/sass/show.scss', 'public/css')
+    .sass('resources/sass/top.scss', 'public/css')
     .sourceMaps();

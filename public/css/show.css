@@ -15,6 +15,31 @@
   color: white;
 }
 
+.content {
+  font-family: "ヒラギノ明朝 Pro W3", "Hiragino Mincho Pro", "Hiragino Mincho ProN", "HGS明朝E", "ＭＳ Ｐ明朝", serif;
+  position: relative;
+  padding: 1.5rem 2rem;
+  box-shadow: 0 2px 14px rgba(0, 0, 0, 0.1);
+}
+
+.content:before,
+.ccontent:after {
+  position: absolute;
+  left: 0;
+  width: 50%;
+  height: 2px;
+  content: "";
+  background-image: linear-gradient(135deg, #704308 0%, #ffce08 40%, #e1ce08 60%, #704308 100%);
+}
+
+.content:before {
+  top: 0;
+}
+
+.content:after {
+  bottom: 0;
+}
+
 .image {
   width: 75px; /* 横幅を割合で指定 */
   height: auto; /* 高さは自動指定 */

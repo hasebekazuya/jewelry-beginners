@@ -41,7 +41,7 @@
                     カットによって、色を強調することも、内包物を隠すこともできます。<br/>
                     その石の可能性を見極め、最も価値のある特徴が組み合わさるようカッティングします。</p>
                 <div class="image">
-                    <img src="{{ secure_asset('imag/59178a2115131ffeac216ffd55bb9b74.jpg') }}">
+                    <img src="{{ secure_asset('imag/59178a2115131ffeac216ffd55bb9b74.jpg') }}" class="image_size">
                 </div> 
                 <br/>
                 <h3 class="content_subtitle">★結婚指輪と婚約指輪の違い</h4>

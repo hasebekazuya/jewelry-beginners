@@ -21,6 +21,8 @@
         <link href="{{ secure_asset('css/search.css') }}" rel="stylesheet">
         <link href="{{ secure_asset('css/detail.css') }}" rel="stylesheet">
         <link href="{{ secure_asset('css/show.css') }}" rel="stylesheet">
+        <link href="{{ secure_asset('css/top.css') }}" rel="stylesheet">
+        
     </head>
     <body>
         <div id="app">
