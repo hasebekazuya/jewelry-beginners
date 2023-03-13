@@ -40,18 +40,6 @@ class FavoriteController extends Controller
         return view('admin/favorite/index');
     }
     
-    public function edit()
-    {
-        
-        return view();
-    }
-    
-    public function update()
-    {
-        
-        return redirect();
-    }
-    
      public function delete()
     {
         

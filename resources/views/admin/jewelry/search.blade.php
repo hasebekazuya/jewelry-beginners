@@ -27,7 +27,7 @@
                         <thead>
                             <tr>
                                 <th>各行</th>
-                                <th>宝石名</th>
+                                <th colspan="8">宝石名</th>
                             </tr>
                         </thead>
                         <tbody>

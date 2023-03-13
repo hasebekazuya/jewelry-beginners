@@ -22,7 +22,7 @@
             </ul>
         </nav> 
         <div class="list-jewelry col-md-10 mx-auto">
-            <div class="image">    
+            <div class="storage">    
                 <img src="{{ secure_asset('storage/image/' . $gem->image_path) }}">
             </div> 
             <h4 class="content">宝石名</h4>

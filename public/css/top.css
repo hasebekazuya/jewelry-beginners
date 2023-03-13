@@ -9,7 +9,7 @@
   height: 170px;
   background-color: #EEEEEE;
   cursor: pointer;
-  transition: all 0.6s ease;
+  transition: all 5ms 0.3s ease-out;
   display: inline-block;
   margin: 10px;
 }

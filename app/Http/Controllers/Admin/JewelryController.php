@@ -112,6 +112,7 @@ class JewelryController extends Controller
     }
     public function search(Request $request)
     {
+        // 多次元配列(2次元)
         $katakana=array(
             'ア' => [],
             'カ' => [],
